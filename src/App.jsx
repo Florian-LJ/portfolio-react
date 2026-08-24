@@ -7,14 +7,16 @@ import Contact from './components/Contact.jsx'
 
 const App = () => {
   return (
-    <main className="bg-gray-900 text-white h-full">
+    <div className="bg-gray-900 text-white h-full">
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </div>
   )
 }
 

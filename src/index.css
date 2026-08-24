@@ -4,3 +4,50 @@ html {
   scroll-behavior: smooth;
 }
 
+
+@layer components{
+  .text-glow-yellow {
+    text-shadow: 0 0 30px rgba(250, 204, 21, 0.45);
+  }
+
+  .glow-border:hover {
+    box-shadow:
+      0 0 20px rgba(250, 204, 21, 0.12),
+      0 0 20px rgba(250, 204, 21, 0.20),
+      inset 0 0 20px rgba(250, 204, 21, 0.04),
+      inset 0 0 20px rgba(250, 204, 21, 0.05);
+  }
+}
+
+/**
+  * Custom animations.
+  */
+@layer utilities {
+
+  @keyframes slow-drift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(20px, -30px);
+    }
+    50% {
+      transform: translate(-15px, -20px);
+    }
+    75% {
+      transform: translate(30px, 10px);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
