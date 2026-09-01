@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="hidden sm:flex space-x-4 ">
           <a href="#about" className="hover:text-yellow-400 transition-all duration-300"> About</a>
           <a href="#skills" className="hover:text-yellow-400 transition-all duration-300">Skills</a>
-          <a href="#projects" className="hover:text-yellow-400 transition-all duration-300">Projects</a>
+          <a href="#projects" className="hover:text-yellow-400 hover:scale-105 transition-all duration-300">Projects</a>
           <a href="#contact" className="hover:text-yellow-400 transition-all duration-300">Contact</a>
         </div>
         <div className="block sm:hidden">

@@ -1,7 +1,7 @@
 import React from 'react'
 import photo_profile from '../assets/photo_profil.jpg'
 import cvFile from '../assets/CV_Florian_Le_Joncour.pdf'
-import { ChevronsDown } from "lucide-react";
+import { ChevronsDown, Mail, Briefcase } from "lucide-react";
 import '../index.css'
 
 function Hero() {
@@ -29,30 +29,28 @@ function Hero() {
     <div className="flex flex-col items-center min-h-screen justify-center z-10 relative">
       <div className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-8 items-center justify-center text-white max-sm:grid-cols-1 max-sm:gap-y-6">
         <div className="flex flex-col items-start justify-center space-y-4 p-8 max-sm:items-center max-sm:text-center mt-10 ">
-          <h3 className="text-3xl">Bienvenue sur le portfolio de</h3>
-          <h1 className="text-7xl max-sm:text-6xl font-bold text-yellow-400 text-glow-yellow">Le Joncour Florian</h1>
+          <h3 className="text-3xl font-bold">Bienvenue sur le portfolio de</h3>
+          <h1 className="text-7xl max-sm:text-5xl font-bold text-yellow-400 text-glow-yellow">Le Joncour Florian</h1>
 
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm text-primary">
-            <span className="inline-flex items-center rounded-full border border-yellow-400/60 bg-yellow-400/10 px-4 py-1.5 text-sm font-medium text-yellow-300 shadow-[0_0_12px_rgba(250,204,21,0.15)]">
-              Développeur Java • Futur ingénieur cybersécurité
-            </span>
+          <span className="inline-flex items-center rounded-full px-4 py-2 border border-yellow-400/60 bg-yellow-400/10 px-4 py-1.5 text-sm font-medium text-yellow-300 shadow-[0_0_12px_rgba(250,204,21,0.15)]">
+            Développeur Java • Futur ingénieur cybersécurité
           </span>
               
-          <p className="text-lg  pb-4">
+          <p className="text-lg pb-4 text-start">
             Attiré par l'informatique depuis le collège, j'ai construit mon parcours pour atteindre un objectif. 
             Actuellement en 3ème année de BUT Informatique à l'IUT de Vannes, j'ai pour objectif de me spécialiser dans le domaine de 
             la cybersécurité en intégrant l'ENSIBS lors de la rentrée 2027.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 max-sm:flex-col">
             <a href="mailto:florian.lejoncour@gmail.com">
-              <button className="px-6 py-3 rounded-full bg-yellow-400 text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
-                Me contacter
+              <button className="flex gap-2 px-6 py-3 rounded-full bg-yellow-400 text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+                <Mail />Me contacter
               </button>
             </a>
             <a href="#projects">
-              <button className="px-6 py-3 rounded-full border-2 border-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
-                Mes projets
+              <button className="flex gap-2 px-6 py-3 rounded-full border-2 border-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+                <Briefcase />Mes projets
               </button> 
             </a>
             <a href={cvFile} download className="text-sm border-b border-yellow-400 hover:scale-105 hover:text-yellow-300 transition-all duration-300">
