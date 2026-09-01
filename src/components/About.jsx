@@ -6,7 +6,7 @@ function About() {
     <div id="about" className="relative flex flex-col items-center h-full bg-gray-950 ">
       
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yellow-400/70 to-transparent" />
-
+ 
 
       {/* Titre de la section */}
       <div className="mt-17 w-full max-w-4xl gap-4 px-6 text-yellow-400">
