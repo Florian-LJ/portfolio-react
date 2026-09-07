@@ -1,12 +1,12 @@
 import React from 'react'
-import {CheckCheck, ShieldAlert, Target, Flame} from "lucide-react";
+import { CheckCheck, ShieldAlert, Target, Flame } from "lucide-react";
 
 function About() {
   return (
-    <div id="about" className="relative flex flex-col items-center h-full bg-gray-950 ">
-      
+    <div id="about" className="relative flex flex-col items-center min-h-screen ">
+
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yellow-400/70 to-transparent" />
- 
+
 
       {/* Titre de la section */}
       <div className="mt-17 w-full max-w-4xl gap-4 px-6 text-yellow-400">
@@ -17,7 +17,7 @@ function About() {
 
       {/* Contenu de la section */}
       <div className="w-full max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center justify-center text-white max-md:grid-cols-1 max-md:gap-y-6 ">
-        
+
         {/* Section gauche avec le texte */}
         <div className="flex flex-col items-start justify-center space-y-4 p-8 max-sm:items-center max-sm:text-center">
           <h3 className="text-4xl font-bold text-yellow-400 max-sm:text-3xl">
@@ -38,8 +38,8 @@ function About() {
 
           <div className="w-2/3 max-w-48 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded border border-white/10 bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
             <CheckCheck className="mt-2 h-15 w-15 rounded bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
-            <span className="text-base lg:text-xl font-bold text-yellow-400">Mes Qualités</span>
-            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase tracking-[0.2em] text-yellow-300/70">
+            <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Qualités</span>
+            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase md:tracking-[0.2em] text-yellow-300/70">
               <li>Curieux</li>
               <li>Rigoureux</li>
               <li>Motivé</li>
@@ -48,18 +48,18 @@ function About() {
 
           <div className="w-2/3 max-w-48 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded border border-white/10 bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
             <ShieldAlert className="mt-2 h-15 w-15 rounded bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
-            <span className="text-xl font-bold text-yellow-400">Mes Défauts</span>
-            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase tracking-[0.2em] text-yellow-300/70">
+            <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Défauts</span>
+            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase md:tracking-[0.2em] text-yellow-300/70">
               <li>Perfectionniste</li>
               <li>Impulsif</li>
               <li>Curieux</li>
             </ul>
           </div>
-          
+
           <div className="w-2/3 max-w-48 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded border border-white/10 bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
             <Flame className="mt-2 h-15 w-15 rounded bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
-            <span className="text-xl font-bold text-yellow-400">Mes Passions</span>
-            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase tracking-[0.2em] text-yellow-300/70">
+            <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Passions</span>
+            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase md:tracking-[0.2em] text-yellow-300/70">
               <li>Sport</li>
               <li>Musique</li>
               <li>Lecture</li>
@@ -68,8 +68,8 @@ function About() {
 
           <div className="w-2/3 max-w-48 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded border border-white/10 bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
             <Target className="mt-2 h-15 w-15 rounded bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
-            <span className="text-xl font-bold text-yellow-400">Mes Objectifs</span>
-            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase tracking-[0.2em] text-yellow-300/70">
+            <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Objectifs</span>
+            <ul className="flex flex-col items-center gap-2 text-center text-sm uppercase md:tracking-[0.2em] text-yellow-300/70">
               <li>Cyberdéfense</li>
               <li>ENSIBS 2027</li>
               <li>Ingénieur cybersécurité</li>
