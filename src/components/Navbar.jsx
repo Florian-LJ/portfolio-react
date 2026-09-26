@@ -6,9 +6,10 @@ const Navbar = () => {
       <nav className="flex place-content-around  items-center">
         <a href="#" className="text-xl font-bold text-yellow-400">Mon Portfolio</a>
         <div className="hidden sm:flex space-x-4 ">
-          <a href="#about" className="hover:text-yellow-400 transition-all duration-300"> About</a>
-          <a href="#skills" className="hover:text-yellow-400 transition-all duration-300">Skills</a>
-          <a href="#projects" className="hover:text-yellow-400 hover:scale-105 transition-all duration-300">Projects</a>
+          <a href="#about" className="hover:text-yellow-400 transition-all duration-300"> À propos</a>
+          <a href="#experiences" className="hover:text-yellow-400 transition-all duration-300">Expériences</a>
+          <a href="#skills" className="hover:text-yellow-400 transition-all duration-300">Compétences</a>
+          <a href="#projects" className="hover:text-yellow-400 hover:scale-105 transition-all duration-300">Projets</a>
           <a href="#contact" className="hover:text-yellow-400 transition-all duration-300">Contact</a>
         </div>
         <div className="block sm:hidden">

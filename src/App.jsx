@@ -8,7 +8,7 @@ import Experiences from './components/Experiences.jsx'
 
 const App = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-950 text-white h-full">
+    <div className="bg-gray-900 text-white h-full">
       <Navbar />
       <main>
         <Hero />

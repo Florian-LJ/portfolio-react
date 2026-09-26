@@ -3,9 +3,8 @@ import { CheckCheck, ShieldAlert, Target, Flame } from "lucide-react";
 
 function About() {
   return (
-    <div id="about" className="relative flex flex-col items-center min-h-screen ">
+    <div id="about" className="relative bg-gray-950 flex flex-col items-center min-h-screen ">
 
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yellow-400/70 to-transparent" />
 
 
       {/* Titre de la section */}
@@ -34,7 +33,45 @@ function About() {
         </div>
 
         {/* Section droite avec les cartes */}
-        <div className="items-center justify-center grid place-items-center grid-cols-2 gap-y-5 ">
+        <div className="items-center justify-center grid place-items-center gap-y-5">
+          <div className="w-full border-l-2 border-yellow-400 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
+            <div className="flex items-center justify-center gap-4">
+              <CheckCheck className="mt-2 h-10 w-10 rounded-[10px] bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
+              <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Qualités</span>
+            </div>
+            <p className="text-center text uppercase md:tracking-[0.2em]">
+              Curieux • Rigoureux • Motivé
+            </p>
+          </div>
+          <div className="w-full border-l-2 border-yellow-400 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
+            <div className="flex items-center justify-center gap-4">
+              <ShieldAlert className="mt-2 h-10 w-10 rounded-[10px] bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" /> 
+              <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Défauts</span>
+            </div>
+              <p className="text-center text uppercase md:tracking-[0.2em]">
+                Perfectionniste • Réservé
+              </p>
+          </div>
+          <div className="w-full border-l-2 border-yellow-400 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
+            <div className="flex items-center justify-center gap-4">
+              <Flame className="mt-2 h-10 w-10 rounded-[10px] bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
+              <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Passions</span>
+            </div>
+              <p className="text-center text uppercase md:tracking-[0.2em]">
+                Sport • Musique • Lecture
+              </p>
+          </div>
+          <div className="w-full border-l-2 border-yellow-400 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
+            <div className="flex items-center justify-center gap-4">
+              <Target className="mt-2 h-10 w-10 rounded-[10px] bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
+              <span className="text-base text-center lg:text-xl font-bold text-yellow-400">Mes Objectifs</span>
+            </div>
+              <p className="text-center text uppercase md:tracking-[0.2em]">
+                Cyberdéfense • ENSIBS 2027 • Ingénieur cybersécurité
+              </p>
+          </div>
+        </div>
+        {/* <div className="items-center justify-center grid place-items-center grid-cols-2 gap-y-5 ">
 
           <div className="w-2/3 max-w-48 px-4 py-6 flex flex-col items-center justify-center gap-3 rounded border border-white/10 bg-slate-900/80 transition duration-300 hover:-translate-y-1 hover:border-yellow-400">
             <CheckCheck className="mt-2 h-15 w-15 rounded bg-yellow-400 text-black shadow-[0_8px_18px_rgba(250,204,21,0.45)]" />
@@ -76,7 +113,7 @@ function About() {
             </ul>
           </div>
 
-        </div>
+        </div> */}
       </div>
     </div>
   )
