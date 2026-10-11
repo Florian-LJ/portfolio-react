@@ -8,13 +8,13 @@ function Hero() {
   return (
     <section className="pt-3">
 
-    {/* Yellow Dots */}
+    {/* Decorative accent dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(30)].map(() => (
           <div
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
-              backgroundColor: "#facc15 ",
+              backgroundColor: "var(--portfolio-accent)",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animation: `slow-drift ${
@@ -27,12 +27,12 @@ function Hero() {
       </div>
 
     <div className="flex flex-col items-center min-h-screen justify-center z-10 relative">
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-8 items-center justify-center text-white max-sm:grid-cols-1 max-sm:gap-y-6">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-8 items-center justify-center text-foreground max-sm:grid-cols-1 max-sm:gap-y-6">
         <div className="flex flex-col items-start justify-center space-y-4 p-8 max-sm:items-center max-sm:text-center mt-10 ">
           <h3 className="text-3xl font-bold">Bienvenue sur le portfolio de</h3>
-          <h1 className="text-7xl max-sm:text-5xl font-bold text-yellow-400 text-glow-yellow">Le Joncour Florian</h1>
+          <h1 className="text-7xl max-sm:text-5xl font-bold text-accent text-glow-accent">Le Joncour Florian</h1>
 
-          <span className="inline-flex items-center rounded-full px-4 py-2 border border-yellow-400/60 bg-yellow-400/10 px-4 py-1.5 text-sm font-medium text-yellow-300 shadow-[0_0_12px_rgba(250,204,21,0.15)]">
+          <span className="inline-flex items-center rounded-full border border-accent/60 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-light shadow-accent">
             Développeur Java • Futur ingénieur cybersécurité
           </span>
               
@@ -44,25 +44,25 @@ function Hero() {
 
           <div className="flex flex-wrap items-center gap-4 max-sm:flex-col">
             <a href="mailto:florian.lejoncour@gmail.com">
-              <button className="flex gap-2 px-6 py-3 rounded-full bg-yellow-400 text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+              <button className="flex gap-2 px-6 py-3 rounded-full bg-accent text-accent-contrast transition-all duration-300 hover:scale-105 hover:shadow-accent">
                 <Mail />Me contacter
               </button>
             </a>
             <a href="#projects">
-              <button className="flex gap-2 px-6 py-3 rounded-full border-2 border-yellow-400 text-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+              <button className="flex gap-2 px-6 py-3 rounded-full border-2 border-accent text-accent transition-all duration-300 hover:scale-105 hover:shadow-accent">
                 <Briefcase />Mes projets
               </button> 
             </a>
-            <a href={cvFile} download className="text-sm border-b border-yellow-400 hover:scale-105 hover:text-yellow-300 transition-all duration-300">
+            <a href={cvFile} download className="text-sm border-b border-accent transition-all duration-300 hover:scale-105 hover:text-accent-light">
               Télécharger mon CV
             </a>
           </div>
 
           {/* <div className="items-center grid grid-cols-2 gap-4 max-sm:gap-y-2 max-sm:mt-4">
-            <div className="bg-gray-800 p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-yellow-400 hover:rotate-3 transition-all duration-300">
+            <div className="bg-surface-raised p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
               <span className="text-lg max-sm:text-xl">☕ Développeur Java</span>
             </div>
-            <div className="bg-gray-800 p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-yellow-400 hover:rotate-3 transition-all duration-300">
+            <div className="bg-surface-raised p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
               <span className="text-lg max-sm:text-xl">🕵️ Futur ingénieur cybersécurité</span>
             </div>
           </div> */}
@@ -73,7 +73,7 @@ function Hero() {
         
           {/* Floating Badge */}
           <div className="absolute -bottom-0 -right-0 rounded-xl px-4 py-3" style={{ animation: `float 4s ease-in-out infinite` }}>
-            <div className="flex items-center gap-3 bg-gray-800 p-2 rounded-full border-2 text-center hover:scale-105 glow-border border-yellow-400 hover:rotate-3 transition-all duration-300">
+            <div className="flex items-center gap-3 bg-surface-raised p-2 rounded-full border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">
                   Recherche alternance cybersécurité 2027
@@ -85,7 +85,7 @@ function Hero() {
         </div>
 
         <a href="#about">
-          <button className="flex flex-col items-center cursor-pointer p-2 m-4 rounded-lg bg-yellow-400 text-slate-900 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.5)] max-sm:focus:scale-105 max-sm:focus:shadow-[0_0_20px_rgba(250,204,21,0.5)]">
+          <button className="flex flex-col items-center cursor-pointer p-2 m-4 rounded-lg bg-accent text-accent-contrast font-semibold transition-all duration-300 hover:scale-105 hover:shadow-accent max-sm:focus:scale-105 max-sm:focus:shadow-accent">
             Me découvrir  <ChevronsDown className="animate-bounce" size={32} />
           </button>
         </a>

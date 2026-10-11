@@ -1,0 +1,61 @@
+:root {
+  color-scheme: dark;
+  --portfolio-page: #111827;
+  --portfolio-section: #030712;
+  --portfolio-surface: #111827;
+  --portfolio-surface-raised: #1f2937;
+  --portfolio-border: #4b5563;
+  --portfolio-foreground: #f9fafb;
+  --portfolio-muted: #9ca3af;
+  --portfolio-soft: #d1d5db;
+  --portfolio-accent: #facc15;
+  --portfolio-accent-light: #fde047;
+  --portfolio-accent-contrast: #111827;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --portfolio-page: #ffffff;
+  --portfolio-section: #EFEFEF;
+  --portfolio-surface: #f8fafc;
+  --portfolio-surface-raised: #ffffff;
+  --portfolio-border: #cbd5e1;
+  --portfolio-foreground: #0f172a;
+  --portfolio-muted: #475569;
+  --portfolio-soft: #334155;
+  --portfolio-accent: #2563eb;
+  --portfolio-accent-light: #1d4ed8;
+  --portfolio-accent-contrast: #ffffff;
+}
+
+@theme inline {
+  --color-page: var(--portfolio-page);
+  --color-section: var(--portfolio-section);
+  --color-surface: var(--portfolio-surface);
+  --color-surface-raised: var(--portfolio-surface-raised);
+  --color-outline: var(--portfolio-border);
+  --color-foreground: var(--portfolio-foreground);
+  --color-muted: var(--portfolio-muted);
+  --color-soft: var(--portfolio-soft);
+  --color-accent: var(--portfolio-accent);
+  --color-accent-light: var(--portfolio-accent-light);
+  --color-accent-contrast: var(--portfolio-accent-contrast);
+}
+
+@layer components {
+  .text-glow-accent {
+    text-shadow: 0 0 30px color-mix(in srgb, var(--portfolio-accent) 45%, transparent);
+  }
+
+  .glow-border:hover {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--portfolio-accent) 12%, transparent),
+      0 0 20px color-mix(in srgb, var(--portfolio-accent) 20%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--portfolio-accent) 4%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--portfolio-accent) 5%, transparent);
+  }
+
+  .shadow-accent {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--portfolio-accent) 45%, transparent);
+  }
+}

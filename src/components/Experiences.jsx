@@ -39,26 +39,26 @@ const experiences = [
 
 function Experiences() {
     return (
-        <div id="experiences" className="min-h-screen text-white flex flex-col items-center">
+        <div id="experiences" className="min-h-screen text-foreground flex flex-col items-center">
             {/* Titre de la section */}
-            <div className="mt-17 w-full max-w-4xl gap-4 px-6 text-yellow-400">
-                <div className="rounded border border-yellow-400/70 px-4 py-3 text-center shadow-[0_12px_30px_rgba(250,204,21,0.22)]">
+            <div className="mt-17 w-full max-w-4xl gap-4 px-6 text-accent">
+                <div className="rounded border border-accent/70 px-4 py-3 text-center shadow-accent">
                     <span className="text-xl font-medium uppercase tracking-[0.25em]">Mon parcours et mes expériences</span>
                 </div>
             </div>
 
             {/* Timeline */}
             <div className="relative mt-17">
-                <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-400/70 via-yellow-400/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+                <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent/70 via-accent/30 to-transparent md:-translate-x-1/2 shadow-accent" />
 
                 <div className="space-y-10">
                     {experiences.map((exp, index) => (
                         <div key={index} className="relative grid md:grid-cols-2 gap-8">
 
                             {/* Timeline Dot */}
-                            <div className="absolute left-3 md:left-1/2 top-0 w-3 h-3 bg-yellow-400 rounded-full -translate-x-1/2  z-10">
+                            <div className="absolute left-3 md:left-1/2 top-0 w-3 h-3 bg-accent rounded-full -translate-x-1/2  z-10">
                                 {exp.current && (
-                                    <span className="absolute inset-0 rounded-full bg-yellow-400 animate-ping opacity-75" />
+                                    <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-75" />
                                 )}
                             </div>
 
@@ -69,16 +69,16 @@ function Experiences() {
                                     : "md:col-start-2 md:pl-16 md:flex md:justify-start"
                                     }`}
                             >
-                                <div className="group w-full rounded-3xl border border-gray-600 bg-gradient-to-br from-gray-900 via-gray-950 to-gray-800 p-5 md:w-2xl md:p-8 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm hover:border-yellow-400 hover:scale-101 hover:md:scale-103 transition-all duration-300">
-                                    <span className="inline-block text-sm font-semibold text-yellow-400 mb-3">{exp.period}</span>
-                                    <h3 className="text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-yellow-400">{exp.role}</h3>
-                                    <p className="text-gray-400 mb-3">{exp.company}</p>
-                                    <p className="text-gray-300">{exp.description}</p>
+                                <div className="group w-full rounded-3xl border border-outline bg-gradient-to-br from-surface-raised via-page to-section p-5 md:w-2xl md:p-8 shadow-[0_20px_80px_rgba(0,0,0,0.12)] backdrop-blur-sm hover:border-accent hover:scale-101 hover:md:scale-103 transition-all duration-300">
+                                    <span className="inline-block text-sm font-semibold text-accent mb-3">{exp.period}</span>
+                                    <h3 className="text-xl font-bold text-foreground mb-1 transition-colors duration-300 group-hover:text-accent">{exp.role}</h3>
+                                    <p className="text-muted mb-3">{exp.company}</p>
+                                    <p className="text-soft">{exp.description}</p>
                                     <div className={`mt-4 flex flex-wrap gap-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                                         {exp.technologies.map((tech, techIndex) => (
                                             <span
                                                 key={techIndex}
-                                                className="bg-yellow-400/20 text-yellow-400 border border-yellow-400/30 px-3 py-1 rounded-xl text-sm opacity-80 hover:opacity-100 transition-all duration-300"
+                                                className="bg-accent/20 text-accent border border-accent/30 px-3 py-1 rounded-xl text-sm opacity-80 hover:opacity-100 transition-all duration-300"
                                             >
                                                 {tech}
                                             </span>
