@@ -150,7 +150,7 @@ function SkillGroup({ group }) {
         {group.items.map((skill) => (
           <li
             key={skill.name}
-            className="group flex flex-col items-center  hover:border-accent/50 glow-border justify-center rounded-xl border border-outline bg-surface-raised p-3 text-center"
+            className="group flex flex-col items-center  hover:border-accent/50 glow-border justify-center rounded-xl border border-outline bg-surface-raised p-3 text-center transition duration-300"
           >
             <SkillIcon name={skill.name} src={skill.icon} />
             <p className="mt-2 text-sm font-medium text-soft">{skill.name}</p>
