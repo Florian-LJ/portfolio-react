@@ -44,12 +44,12 @@ function Hero() {
 
           <div className="flex flex-wrap items-center gap-4 max-sm:flex-col">
             <a href="mailto:florian.lejoncour@gmail.com">
-              <button className="flex gap-2 px-6 py-3 rounded-full bg-accent text-accent-contrast transition-all duration-300 hover:scale-105 hover:shadow-accent">
+              <button className="flex gap-2 px-6 py-3 glow-border rounded-full bg-accent text-accent-contrast transition-all duration-300 hover:scale-105 hover:shadow-accent">
                 <Mail />Me contacter
               </button>
             </a>
             <a href="#projects">
-              <button className="flex gap-2 px-6 py-3 rounded-full border-2 border-accent text-accent transition-all duration-300 hover:scale-105 hover:shadow-accent">
+              <button className="flex gap-2 px-6 py-3 rounded-full border-2 glow-border border-accent text-accent transition-all duration-300 hover:scale-105 hover:shadow-accent">
                 <Briefcase />Mes projets
               </button> 
             </a>
@@ -57,15 +57,6 @@ function Hero() {
               Télécharger mon CV
             </a>
           </div>
-
-          {/* <div className="items-center grid grid-cols-2 gap-4 max-sm:gap-y-2 max-sm:mt-4">
-            <div className="bg-surface-raised p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
-              <span className="text-lg max-sm:text-xl">☕ Développeur Java</span>
-            </div>
-            <div className="bg-surface-raised p-2 rounded-lg border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
-              <span className="text-lg max-sm:text-xl">🕵️ Futur ingénieur cybersécurité</span>
-            </div>
-          </div> */}
         </div>
 
         <div className="relative flex flex-col items-center justify-center space-y-4 p-8 max-sm:items-center max-sm:text-center">
@@ -85,7 +76,7 @@ function Hero() {
         </div>
 
         <a href="#about">
-          <button className="flex flex-col items-center cursor-pointer p-2 m-4 rounded-lg bg-accent text-accent-contrast font-semibold transition-all duration-300 hover:scale-105 hover:shadow-accent max-sm:focus:scale-105 max-sm:focus:shadow-accent">
+          <button className="flex flex-col items-center glow-border cursor-pointer p-2 m-4 rounded-lg bg-accent text-accent-contrast font-semibold transition-all duration-300 hover:scale-105 hover:shadow-accent max-sm:focus:scale-105 max-sm:focus:shadow-accent">
             Me découvrir  <ChevronsDown className="animate-bounce" size={32} />
           </button>
         </a>

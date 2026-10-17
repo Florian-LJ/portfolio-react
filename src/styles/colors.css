@@ -1,19 +1,4 @@
 :root {
-  color-scheme: dark;
-  --portfolio-page: #111827;
-  --portfolio-section: #030712;
-  --portfolio-surface: #111827;
-  --portfolio-surface-raised: #1f2937;
-  --portfolio-border: #4b5563;
-  --portfolio-foreground: #f9fafb;
-  --portfolio-muted: #9ca3af;
-  --portfolio-soft: #d1d5db;
-  --portfolio-accent: #facc15;
-  --portfolio-accent-light: #fde047;
-  --portfolio-accent-contrast: #111827;
-}
-
-[data-theme="light"] {
   color-scheme: light;
   --portfolio-page: #ffffff;
   --portfolio-section: #EFEFEF;
@@ -26,6 +11,21 @@
   --portfolio-accent: #2563eb;
   --portfolio-accent-light: #1d4ed8;
   --portfolio-accent-contrast: #ffffff;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --portfolio-page: #111827;
+  --portfolio-section: #030712;
+  --portfolio-surface: #111827;
+  --portfolio-surface-raised: #1f2937;
+  --portfolio-border: #4b5563;
+  --portfolio-foreground: #f9fafb;
+  --portfolio-muted: #9ca3af;
+  --portfolio-soft: #d1d5db;
+  --portfolio-accent: #facc15;
+  --portfolio-accent-light: #fde047;
+  --portfolio-accent-contrast: #111827;
 }
 
 @theme inline {

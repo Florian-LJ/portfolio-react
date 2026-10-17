@@ -1,46 +1,107 @@
 import React, { useState } from 'react'
 
-// level : 1 à 5 (à ajuster selon ton ressenti réel)
+const sk = (id) => `https://skillicons.dev/icons?i=${id}`
+const iconify = (collection, id) =>
+  `https://api.iconify.design/${collection}/${id}.svg`
+
 const skillGroups = [
   {
-    title: 'Langages',
-    description: 'Ce que j’écris au quotidien, du back-end au navigateur.',
+    title: 'Back-end Java',
+    description:
+      'Développement d’API REST et de microservices en Java, avec Spring Boot et Maven. Tests unitaires et d’intégration, documentation Swagger.',
     items: [
-      { name: 'Java', level: 4, icon: 'https://skillicons.dev/icons?i=java' },
-      { name: 'Python', level: 4, icon: 'https://skillicons.dev/icons?i=python' },
-      { name: 'JavaScript', level: 4, icon: 'https://skillicons.dev/icons?i=js' },
-      { name: 'HTML', level: 5, icon: 'https://skillicons.dev/icons?i=html' },
-      { name: 'CSS', level: 4, icon: 'https://skillicons.dev/icons?i=css' }
+      { name: 'Java', icon: sk('java') },
+      { name: 'Spring Boot', icon: sk('spring') },
+      { name: 'Maven', icon: sk('maven') },
+      { name: 'Postman', icon: sk('postman') }
     ]
   },
   {
-    title: 'Frameworks & Web',
-    description: 'Les outils pour construire des applications complètes.',
+    title: 'Automatisation & IA',
+    description:
+      'Automatisation de tâches répétitives et utilisation d’IA pour la génération de code et la rédaction de documentation.',
     items: [
-      { name: 'Spring Boot', level: 3, icon: 'https://skillicons.dev/icons?i=spring' },
-      { name: 'React', level: 4, icon: 'https://skillicons.dev/icons?i=react' },
-      { name: 'TailwindCSS', level: 4, icon: 'https://skillicons.dev/icons?i=tailwind' },
-      { name: 'Wordpress', level: 3, icon: 'https://skillicons.dev/icons?i=wordpress' }
+      { name: 'Power Automate', icon: iconify('selfhst', 'microsoft-power-automate') },
+      { name: 'Ansible', icon: iconify('skill-icons', 'ansible') },
+      { name: 'n8n', icon: iconify('logos', 'n8n-icon') },
+      { name: 'Claude', icon: iconify('logos', 'claude-icon') },
+      { name: 'GitHub Copilot', icon: iconify('logos', 'github-copilot') }
     ]
   },
   {
-    title: 'Bases de données',
-    description: 'Relationnel ou NoSQL, selon la forme des données.',
+    title: 'Audit & Sécurité',
+    description:
+      'Audit de sécurité des applications web et des infrastructures, tests d’intrusion, analyse de vulnérabilités et exploitation de failles.',
     items: [
-      { name: 'MySQL', level: 4, icon: 'https://skillicons.dev/icons?i=mysql' },
-      { name: 'PostgreSQL', level: 3, icon: 'https://skillicons.dev/icons?i=postgres' },
-      { name: 'MongoDB', level: 3, icon: 'https://skillicons.dev/icons?i=mongodb' },
-      { name: 'SQLite', level: 3, icon: 'https://skillicons.dev/icons?i=sqlite' }
+      { name: 'Openvas', icon: iconify('selfhst', 'openvas') },
+      {
+        name: 'Bloodhound',
+        icon: 'https://raw.githubusercontent.com/SpecterOps/BloodHound/main/cmd/ui/public/img/BHCE_Vertical_RedField.svg'
+      },
+      { name: 'Nmap', icon: iconify('file-icons', 'nmap') },
+      { name: 'Metasploit', icon: iconify('thesvg-color', 'metasploit') }
     ]
   },
   {
-    title: 'DevOps & Infrastructure',
-    description: 'Environnements, conteneurs et versionnage du code.',
+    title: 'Cryptographie',
+    description:
+      'Connaissances en cryptographie appliquée : chiffrement symétrique et asymétrique, hachage, signatures numériques, certificats.',
     items: [
-      { name: 'Docker', level: 3, icon: 'https://skillicons.dev/icons?i=docker' },
-      { name: 'Linux', level: 4, icon: 'https://skillicons.dev/icons?i=linux' },
-      { name: 'Git', level: 4, icon: 'https://skillicons.dev/icons?i=git' },
-      { name: 'VirtualBox', level: 3, icon: '../images/Virtualbox_logo.webp' }
+      { name: 'RSA', icon: iconify('mdi', 'key-variant') },
+      { name: 'Diffie-Hellman', icon: iconify('mdi', 'swap-horizontal') },
+      { name: 'AES', icon: iconify('mdi', 'lock') },
+      { name: 'SHA-256', icon: iconify('mdi', 'hashtag') },
+      { name: 'OpenSSL', icon: iconify('simple-icons', 'openssl') }
+    ]
+  },
+  {
+    title: 'Livraison & CI/CD',
+    description:
+      'Automatisation du déploiement des applications et des infrastructures, intégration continue et livraison continue.',
+    items: [
+      { name: 'GitLab CI/CD', icon: sk('gitlab') },
+      { name: 'Kubernetes', icon: sk('kubernetes') },
+      { name: 'Docker', icon: sk('docker') },
+      { name: 'Git', icon: sk('git') },
+      { name: 'Bash', icon: sk('bash') }
+    ]
+  },
+  {
+    title: 'Données',
+    description:
+      'Conception et gestion de bases de données relationnelles et NoSQL, modélisation des données, optimisation des requêtes.',
+    items: [
+      { name: 'PostgreSQL', icon: sk('postgresql') },
+      { name: 'MySQL', icon: sk('mysql') },
+      { name: 'MongoDB', icon: sk('mongodb') },
+      { name: 'SQLite', icon: sk('sqlite') },
+      { name: 'Firebase', icon: sk('firebase') }
+    ]
+  },
+  {
+    title: 'Web & scripting',
+    description:
+      'Développement front-end et scripting pour l’automatisation de tâches, la manipulation du DOM et la création d’interfaces utilisateur interactives.',
+    items: [
+      { name: 'Python', icon: sk('python') },
+      { name: 'TypeScript', icon: sk('typescript') },
+      { name: 'JavaScript', icon: sk('javascript') },
+      { name: 'React', icon: sk('react') },
+      { name: 'Vite', icon: sk('vite') },
+      { name: 'TailwindCSS', icon: sk('tailwindcss') },
+      { name: 'WordPress', icon: sk('wordpress') }
+    ]
+  },
+  {
+    title: 'Systèmes & auto-hébergement',
+    description:
+      'Administration de systèmes Linux et Windows, virtualisation, conteneurisation et auto-hébergement d’applications web et de services.',
+    items: [
+      { name: 'Linux', icon: sk('linux') },
+      { name: 'Traefik', icon: iconify('logos', 'traefik-proxy') },
+      { name: 'Let’s Encrypt', icon: iconify('logos', 'letsencrypt') },
+      { name: 'VirtualBox', icon: iconify('simple-icons', 'virtualbox') },
+      { name: 'Windows', icon: sk('windows') },
     ]
   }
 ]
@@ -72,11 +133,13 @@ function SkillIcon({ name, src }) {
 
 function SkillGroup({ group }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm transition-all duration-700 motion-reduce:transition-none">
-      <div className="mb-5 flex items-start justify-between gap-4 border-b border-white/10 pb-4">
+    <div className="group rounded-2xl border border-outline bg-surface/50 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm hover:scale-101 transition duration-300">
+      <div className="mb-5 flex items-start justify-between gap-4 border-b border-outline pb-4">
         <div>
-          <h3 className="text-xl font-semibold text-white">{group.title}</h3>
-          <p className="mt-1 max-w-xs text-sm text-slate-400">{group.description}</p>
+          <h3 className="text-xl font-semibold text-foreground transition-colors duration-300 group-hover:text-accent">
+            {group.title}
+          </h3>
+          <p className="mt-1 max-w-xs text-sm text-muted">{group.description}</p>
         </div>
         <span className="shrink-0 rounded-full border border-accent/50 px-2.5 py-0.5 text-xs font-medium text-accent">
           {group.items.length}
@@ -87,10 +150,10 @@ function SkillGroup({ group }) {
         {group.items.map((skill) => (
           <li
             key={skill.name}
-            className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-slate-800/60 p-3 text-center transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/60 hover:bg-slate-800 hover:shadow-[0_8px_20px_rgba(34,211,238,0.12)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            className="group flex flex-col items-center  hover:border-accent/50 glow-border justify-center rounded-xl border border-outline bg-surface-raised p-3 text-center"
           >
             <SkillIcon name={skill.name} src={skill.icon} />
-            <p className="mt-2 text-sm font-medium text-slate-200">{skill.name}</p>
+            <p className="mt-2 text-sm font-medium text-soft">{skill.name}</p>
           </li>
         ))}
       </ul>
@@ -109,7 +172,7 @@ function Skills() {
           <div className="rounded border border-accent/70 px-4 py-3 text-center shadow-accent">
             <h2 className="text-xl font-medium uppercase tracking-[0.25em]">Compétences</h2>
           </div>
-          <p className="mx-auto mt-4 max-w-xl text-center text-slate-400">
+          <p className="mx-auto mt-4 max-w-xl text-center text-soft">
             Les technologies que j’utilise pour concevoir, développer et déployer mes projets.
           </p>
         </div>

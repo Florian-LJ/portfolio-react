@@ -9,7 +9,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
           <a href="#about" className="transition-all duration-300 hover:text-accent"> À propos</a>
           <a href="#experiences" className="transition-all duration-300 hover:text-accent">Expériences</a>
           <a href="#skills" className="transition-all duration-300 hover:text-accent">Compétences</a>
-          <a href="#projects" className="transition-all duration-300 hover:scale-105 hover:text-accent">Projets</a>
+          <a href="#projects" className="transition-all duration-300 hover:text-accent">Projets</a>
           <a href="#contact" className="transition-all duration-300 hover:text-accent">Contact</a>
         </div>
         <button
@@ -17,10 +17,10 @@ const Navbar = ({ theme, onToggleTheme }) => {
           onClick={onToggleTheme}
           aria-label="Basculer le thème clair ou sombre"
           aria-pressed={theme === 'light'}
-          className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-3 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:w-36 md:justify-center"
         >
           {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
-          <span className="hidden sm:inline">{theme === 'dark' ? 'Mode clair' : 'Mode sombre'}</span>
+          <span className="hidden md:inline">{theme === 'dark' ? 'Mode clair' : 'Mode sombre'}</span>
         </button>
         <div className="block sm:hidden">
           <button type="button" aria-label="Ouvrir le menu" className="text-foreground focus:outline-none">

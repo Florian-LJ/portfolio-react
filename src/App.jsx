@@ -10,7 +10,7 @@ import Experiences from './components/Experiences.jsx'
 const App = () => {
   const [theme, setTheme] = useState(() => {
     const savedTheme = window.localStorage.getItem('portfolio-theme')
-    return savedTheme === 'light' ? 'light' : 'dark'
+    return savedTheme === 'dark' ? 'dark' : 'light'
   })
 
   const toggleTheme = () => {
