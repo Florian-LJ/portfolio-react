@@ -67,7 +67,8 @@ function Hero() {
             <div className="flex items-center gap-3 bg-surface-raised p-2 rounded-full border-2 text-center hover:scale-105 glow-border border-accent hover:rotate-3 transition-all duration-300">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="text-sm font-medium">
-                  Recherche alternance cybersécurité 2027
+                  Recherche alternance cybersécurité sept 2027 <br/>
+                  Recherche stage informatique 25 janv - 14 mai 2027
                 </span>
               </div>
             </div>
