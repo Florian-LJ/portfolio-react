@@ -1,4 +1,4 @@
-import { ArrowUpRight, CodeXml } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import portfolioImage from '../assets/hero.png'
 
 const projects = [
@@ -60,19 +60,19 @@ function Projects() {
           {projects.map((project) => (
             <article
               key={project.name}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-outline bg-surface-raised shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-accent"
+              className="group/card flex flex-col overflow-hidden rounded-2xl border border-outline bg-surface-raised shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-accent"
             >
               <div className="flex aspect-[16/10] items-center justify-center overflow-hidden bg-white p-8">
                 <img
                   src={project.image}
                   alt={project.imageAlt}
-                  className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-contain transition-transform duration-500 group-hover/card:scale-105"
                 />
               </div>
 
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold text-foreground transition-colors group-hover:text-accent">
+                  <h3 className="text-xl font-bold text-foreground transition-colors group-hover/card:text-accent">
                     {project.name}
                   </h3>
 
@@ -103,7 +103,7 @@ function Projects() {
                   href={project.repository}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-black px-4 py-2.5 font-medium text-white transition hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="group/button mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-black px-4 py-2.5 font-medium text-white transition hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <img
                     src="https://api.iconify.design/akar-icons/github-fill.svg?color=%23ffffff"
@@ -111,7 +111,7 @@ function Projects() {
                     className="h-5 w-5"
                   />
                   Voir le repo
-                  <ArrowUpRight aria-hidden="true" size={16} />
+                  <ArrowUpRight aria-hidden="true" size={16} className="transition-transform group-hover/button:translate-x-1" />
                 </a>
               </div>
             </article>
