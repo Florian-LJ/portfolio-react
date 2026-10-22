@@ -34,7 +34,7 @@ const Footer = () => (
           aria-label="Voir le profil GitHub de Florian Le Joncour (ouvre un nouvel onglet)"
           className="rounded-full border border-outline p-2.5 text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          <CodeXml size={18} aria-hidden="true" />
+          <img src="https://api.iconify.design/akar-icons/github-fill.svg"/>
         </a>
         <a
           href="#"
