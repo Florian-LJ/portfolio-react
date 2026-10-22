@@ -1,4 +1,4 @@
-import { ArrowUp, CodeXml, Mail } from 'lucide-react'
+import { ArrowUp, Mail } from 'lucide-react'
 
 const Footer = () => (
   <footer className="border-t border-outline bg-section px-6 py-10 text-foreground">
@@ -34,7 +34,12 @@ const Footer = () => (
           aria-label="Voir le profil GitHub de Florian Le Joncour (ouvre un nouvel onglet)"
           className="rounded-full border border-outline p-2.5 text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          <img src="https://api.iconify.design/akar-icons/github-fill.svg"/>
+          <img
+            src="https://api.iconify.design/akar-icons/github-fill.svg?color=%23b0b0b0"
+            alt=""
+            aria-hidden="true"
+            className="h-5 w-5"
+          />
         </a>
         <a
           href="#"
