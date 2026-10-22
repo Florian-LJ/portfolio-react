@@ -1,43 +1,57 @@
 import { ArrowUpRight } from 'lucide-react'
-import portfolioImage from '../assets/hero.png'
+import portfolioImage from '../assets/portfolio-react.png'
+import kioptrixImage from '../assets/kioptrix-level2.jpg'
+import defiutImage from '../assets/defiut.png'
+import mongolingoImage from '../assets/mongolingo.png'
+import wordpressSeteImage from '../assets/wordpress-sete.png'
 
 const projects = [
   {
     name: 'Portfolio React',
     status: 'En cours',
     description:
-      'Mon portfolio personnel, réalisé avec React et Tailwind CSS pour présenter mon parcours, mes compétences et mes projets.',
+      "Mon portfolio personnel, réalisé avec React et Tailwind CSS pour présenter mon parcours, mes compétences et mes projets. L'objectif est de créer un site web moderne et responsive qui reflète mon identité professionnelle et mes réalisations tout en limitant l'utilisation de l'IA",
     image: portfolioImage,
     imageAlt: 'Illustration du projet Portfolio React',
     repository: 'https://github.com/Florian-LJ/portfolio-react',
     technologies: ['React', 'Tailwind CSS'],
   },
   {
-    name: 'Portfolio React',
+    name: 'Kioptrix Level 2',
+    status: 'Terminé',
     description:
-      'Mon portfolio personnel, réalisé avec React et Tailwind CSS pour présenter mon parcours, mes compétences et mes projets.',
-    image: portfolioImage,
-    imageAlt: 'Illustration du projet Portfolio React',
-    repository: 'https://github.com/Florian-LJ/portfolio-react',
-    technologies: ['React', 'Tailwind CSS'],
+      "Test d'intrusion sur une machine délibérément vulnérable, réalisé en TP : reconnaissance Nmap, injection SQL, exécution de commandes à distance pour un reverse shell, puis exploit noyau jusqu'à root.",
+    image: kioptrixImage,
+    imageAlt: 'Illustration du projet Kioptrix Level 2',
+    technologies: ['Cybersécurité','Nmap', 'SQL Injection', 'Reverse Shell', 'Kernel Exploit'],
   },
   {
-    name: 'Portfolio React',
+    name: 'DefIUT',
+    status: 'Terminé',
     description:
-      'Mon portfolio personnel, réalisé avec React et Tailwind CSS pour présenter mon parcours, mes compétences et mes projets.',
-    image: portfolioImage,
-    imageAlt: 'Illustration du projet Portfolio React',
-    repository: 'https://github.com/Florian-LJ/portfolio-react',
-    technologies: ['React', 'Tailwind CSS'],
+      "Plateforme de défis informatiques pour l'IUT : authentification, gestion des soumissions et exécution isolée du code en sandbox Docker. Architecture full-stack avec API REST.",
+    image: defiutImage,
+    imageAlt: 'Illustration du projet DefIUT',
+    technologies: ['Docker', 'Express.js', 'React', 'MySQL'],
   },
   {
-    name: 'Portfolio React',
+    name: 'Mongolingo',
+    status: 'Terminé',
     description:
-      'Mon portfolio personnel, réalisé avec React et Tailwind CSS pour présenter mon parcours, mes compétences et mes projets.',
-    image: portfolioImage,
-    imageAlt: 'Illustration du projet Portfolio React',
-    repository: 'https://github.com/Florian-LJ/portfolio-react',
-    technologies: ['React', 'Tailwind CSS'],
+      "Mongolingo est une application web de quiz inspirée de Duolingo, dédiée à l'apprentissage de MongoDB. Elle propose plus de 100 questions réparties sur 4 niveaux de difficulté (Easy, Medium,Hard, Expert) couvrant plusieurs thèmes. Chaque bonne réponse exécute la requête sur une vraie base MongoDB et affiche le résultat en temps réel dans l'interface.",
+    image: mongolingoImage,
+    imageAlt: 'Illustration du projet Mongolingo',
+    repository: 'https://github.com/Florian-LJ/mongolingo',
+    technologies: ['React', 'Express.js', 'MongoDB', 'Mongoose', 'Docker'],
+  },
+  {
+    name: 'WordPress sur Sète',
+    status: 'Terminé',
+    description:
+      "Réalisation d'un site WordPress sur la ville de Sète, avec un thème personnalisé et des fonctionnalités spécifiques pour présenter les attractions locales, les événements et les services touristiques. Projet scolaire mélant développement web et économie numérique.",
+    image: wordpressSeteImage,
+    imageAlt: 'Illustration du projet WordPress sur Sète',
+    technologies: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'HTML', 'MySQL'],
   }
 ]
 
@@ -56,17 +70,17 @@ function Projects() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.name}
               className="group/card flex flex-col overflow-hidden rounded-2xl border border-outline bg-surface-raised shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-accent"
             >
-              <div className="flex aspect-[16/10] items-center justify-center overflow-hidden bg-white p-8">
+              <div className="aspect-[16/9] overflow-hidden bg-white">
                 <img
                   src={project.image}
                   alt={project.imageAlt}
-                  className="h-full w-full object-contain transition-transform duration-500 group-hover/card:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
                 />
               </div>
 
@@ -98,7 +112,8 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-
+                
+                {project.repository && (
                 <a
                   href={project.repository}
                   target="_blank"
@@ -112,7 +127,7 @@ function Projects() {
                   />
                   Voir le repo
                   <ArrowUpRight aria-hidden="true" size={16} className="transition-transform group-hover/button:translate-x-1" />
-                </a>
+                </a>)}
               </div>
             </article>
           ))}
