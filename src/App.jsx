@@ -6,6 +6,7 @@ import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import Experiences from './components/Experiences.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -30,6 +31,7 @@ const App = () => {
         <Projects />
         {/* <Contact /> */}
       </main>
+      <Footer />
     </div>
   )
 }
