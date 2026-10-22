@@ -59,7 +59,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex min-h-screen items-center bg-section px-6 py-20"
+      className="relative flex min-h-screen items-center px-6 py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto mb-12 w-full max-w-4xl text-accent">

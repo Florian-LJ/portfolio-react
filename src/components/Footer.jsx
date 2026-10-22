@@ -1,7 +1,7 @@
 import { ArrowUp, CodeXml, Mail } from 'lucide-react'
 
 const Footer = () => (
-  <footer className="border-t border-outline px-6 py-10 text-foreground">
+  <footer className="border-t border-outline bg-section px-6 py-10 text-foreground">
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <a href="#" className="text-lg font-bold text-accent">
