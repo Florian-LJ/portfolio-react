@@ -1,6 +1,5 @@
 import React from 'react'
 import photo_profile from '../assets/photo_profil.jpg'
-import cvFile from '../assets/CV_Florian_Le_Joncour.pdf'
 import { ChevronsDown, Mail, Briefcase } from "lucide-react";
 import '../index.css'
 
@@ -53,7 +52,7 @@ function Hero() {
                 <Briefcase />Mes projets
               </button> 
             </a>
-            <a href={cvFile} download className="text-sm border-b border-accent transition-all duration-300 hover:scale-105 hover:text-accent-light">
+            <a href={`${import.meta.env.BASE_URL}CV_LeJoncour_Florian.zip`} download="CV_LeJoncour_Florian.zip" className="text-sm border-b border-accent transition-all duration-300 hover:scale-105 hover:text-accent-light">
               Télécharger mon CV
             </a>
           </div>
