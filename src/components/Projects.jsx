@@ -1,9 +1,11 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 import portfolioImage from '../assets/portfolio-react.png'
 import kioptrixImage from '../assets/kioptrix-level2.jpg'
 import defiutImage from '../assets/defiut.png'
 import mongolingoImage from '../assets/mongolingo.png'
 import wordpressSeteImage from '../assets/wordpress-sete.png'
+import infraReseau from '../assets/infra_reseau.png'
 
 const projects = [
   {
@@ -15,6 +17,34 @@ const projects = [
     imageAlt: 'Illustration du projet Portfolio React',
     repository: 'https://github.com/Florian-LJ/portfolio-react',
     technologies: ['React', 'Tailwind CSS'],
+  },
+  {
+    name: 'Infrastructure d’entreprise segmentée',
+    status: 'Terminé',
+    description:
+      "Projet réalisé seul sur plusieurs TP : conception d'un réseau d'entreprise segmenté en WAN, DMZ et LAN, avec déploiement des services attendus en entreprise et une politique de filtrage au strict nécessaire. Chaque étape est documentée dans un rapport.",
+    image: infraReseau,
+      highlights: [
+      'Routeur Alpine avec NAT et pare-feu nftables en refus par défaut : seuls le mail et le VPN sont ouverts vers la DMZ, qui ne peut pas joindre le LAN.',
+      'VPN WireGuard site à site.',
+      'DNS faisant autorité avec BIND9 ; messagerie configurée avec SPF, DKIM (OpenDKIM) et DMARC.',
+      'Postfix et Dovecot sous Docker, TLS, webmail Roundcube, et antivirus/antispam ClamAV et SpamAssassin via Amavis, testés avec EICAR et GTUBE.',
+      'Samba pour le partage de fichiers et d’imprimante, puis contrôleur de domaine Active Directory avec Kerberos, postes Windows joints au domaine et profils itinérants.',
+      'OpenLDAP sécurisé en LDAPS et NIS.',
+    ],
+    technologies: [
+      'Alpine Linux',
+      'nftables',
+      'WireGuard',
+      'BIND9',
+      'Postfix',
+      'Dovecot',
+      'Docker',
+      'Samba',
+      'Active Directory',
+      'OpenLDAP',
+      'NIS',
+    ],
   },
   {
     name: 'Kioptrix Level 2',
@@ -56,6 +86,15 @@ const projects = [
 ]
 
 function Projects() {
+  const [expandedProjects, setExpandedProjects] = useState({})
+
+  function toggleProjectDetails(projectName) {
+    setExpandedProjects((current) => ({
+      ...current,
+      [projectName]: !current[projectName],
+    }))
+  }
+
   return (
     <section
       id="projects"
@@ -76,13 +115,15 @@ function Projects() {
               key={project.name}
               className="group/card flex flex-col overflow-hidden rounded-2xl border border-outline bg-surface-raised shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition duration-300 hover:-translate-y-1 hover:border-accent"
             >
-              <div className="aspect-[16/9] overflow-hidden bg-white">
-                <img
-                  src={project.image}
-                  alt={project.imageAlt}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
-                />
-              </div>
+              {project.image && (
+                <div className="aspect-[16/9] overflow-hidden bg-white">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                  />
+                </div>
+              )}
 
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-center justify-between">
@@ -101,6 +142,31 @@ function Projects() {
                 <p className="mt-3 leading-relaxed text-muted">
                   {project.description}
                 </p>
+
+                {project.highlights && (
+                  <>
+                    <button
+                      type="button"
+                      aria-expanded={Boolean(expandedProjects[project.name])}
+                      onClick={() => toggleProjectDetails(project.name)}
+                      className="mt-4 inline-flex w-fit items-center gap-2 font-medium text-accent transition hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    >
+                      {expandedProjects[project.name] ? 'Moins d’infos' : 'Plus d’infos'}
+                      <ChevronDown
+                        aria-hidden="true"
+                        size={16}
+                        className={`transition-transform ${expandedProjects[project.name] ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+                    {expandedProjects[project.name] && (
+                      <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed text-muted">
+                        {project.highlights.map((highlight) => (
+                          <li key={highlight}>{highlight}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                )}
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
