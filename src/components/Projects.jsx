@@ -6,8 +6,18 @@ import defiutImage from '../assets/defiut.png'
 import mongolingoImage from '../assets/mongolingo.png'
 import wordpressSeteImage from '../assets/wordpress-sete.png'
 import infraReseau from '../assets/infra_reseau.png'
+import scikit_learn from '../assets/scikit_learn.jpg'
 
 const projects = [
+  {
+    name: 'Prédiction du prix des maisons',
+    status: 'En cours',
+    description:
+      "Mini-application en cours de développement pour prédire le prix d'une maison à partir de plusieurs critères. L'objectif est d'apprendre scikit-learn en exploitant les données « Demandes de valeurs foncières géolocalisées » (DVF) de data.gouv.fr. Streamlit est envisagé pour l'interface.",
+    image: scikit_learn,
+    imageAlt: 'Illustration du projet Scikit Learn',
+    technologies: ['Python', 'Scikit-learn', 'DVF', 'Streamlit'],
+  },
   {
     name: 'Portfolio React',
     status: 'En cours',

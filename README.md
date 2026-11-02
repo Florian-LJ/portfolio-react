@@ -1,6 +1,6 @@
 # Portfolio — Florian Le Joncour
 
-Portfolio personnel développé avec React pour présenter mon parcours, mes compétences et mes projets. L'interface s'adapte aux mobiles et aux écrans larges, avec un thème clair/sombre mémorisé entre les visites.
+Portfolio personnel développé avec React pour présenter mon parcours, mes compétences et mes projets. C'est aussi un projet d'apprentissage : je cherche à comprendre et à réaliser les choses par moi-même en limitant volontairement l'utilisation de l'IA. L'interface s'adapte aux mobiles et aux écrans larges, avec un thème clair/sombre mémorisé entre les visites.
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white" alt="React 19" />
