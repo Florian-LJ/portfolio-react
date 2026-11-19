@@ -49,7 +49,7 @@ function About() {
               <span className="text-base text-center lg:text-xl font-bold text-accent">Mes Défauts</span>
             </div>
               <p className="text-center text uppercase md:tracking-[0.2em]">
-                Perfectionniste • Réservé
+                Perfectionniste • Discret
               </p>
           </div>
           <div className="w-full border-l-2 border-accent px-4 py-6 flex flex-col items-center justify-center gap-3 rounded bg-surface/80 transition duration-300 hover:-translate-y-1 hover:border-accent">
