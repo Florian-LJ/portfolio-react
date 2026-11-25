@@ -28,8 +28,7 @@ function About() {
           </p>
 
           <p className="text-lg leading-relaxed max-sm:text-base border-l-2 border-accent pl-4">
-            Actuellement alternant en BUT Informatique à la Fonderie de Bretagne, j'y pilote en autonomie un projet de transformation numérique : regrouper et standardiser des données fragmentées pour en faciliter l'analyse, de la collecte des besoins métiers jusqu'aux tableaux de bord Power BI. J'y assiste également le prestataire RSSI dans la mise en place de la norme NIS2. Ces expériences nourrissent mon objectif : rejoindre l'ENSIBS pour y préparer un diplôme d'ingénieur en cybersécurité et sciences des données. Pour accompagner ce cycle ingénieur de 3 ans, je serai à la recherche d'une alternance en lien avec la cybersécurité.
-          </p>
+            Actuellement étudiant en troisième année de BUT Informatique à l’IUT de Vannes, j’effectuais mon alternance au sein de la Fonderie de Bretagne, où j’ai travaillé sur un projet de restructuration et de standardisation des données, de la collecte des besoins métiers jusqu’à la création de tableaux de bord avec Power BI et d’interfaces de visualisation avec Streamlit. J’ai également participé à des travaux liés à la mise en conformité avec la directive NIS2, en accompagnant le RSSI externe de l’entreprise. Mon contrat ayant pris fin à la suite de la liquidation judiciaire de la société, je recherche aujourd’hui un stage de 16 semaines, du 25 janvier au 14 mai 2027, afin de valider mon BUT. À l’issue de cette formation, je souhaite intégrer l’ENSIBS en spécialité Cyberdéfense. Ce cursus se déroulant en alternance sur trois ans, je serai également à la recherche d’une entreprise d’accueil pour la rentrée de septembre 2027.          </p>
         </div>
 
         {/* Section droite avec les cartes */}

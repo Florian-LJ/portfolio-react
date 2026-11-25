@@ -1,14 +1,5 @@
 const experiences = [
     {
-        period: "Sept 2025 — Aujourd'hui",
-        role: "Gestion de projet de restructuration de la donnée",
-        company: "FDB Industries, Lorient (56)",
-        description:
-            "Gestion de projet de restructuration de la donnée pour améliorer la qualité et la cohérence des informations. Collecte et extration des données afin d'aboutir à la conception de tableau de bord pour l'analyse des données.",
-        technologies: ["Power BI", "Power Query", "SQL", "Data Analysis"],
-        current: true,
-    },
-    {
         period: "Sept 2024 — Sept 2027",
         role: "BUT Informatique",
         company: "IUT Vannes (56)",
@@ -16,6 +7,15 @@ const experiences = [
             "Formation universitaire en informatique, couvrant les bases de la programmation, des systèmes d'exploitation, des bases de données et du développement web. Projets pratiques incluant la création d'applications web et mobiles.",
         technologies: ["Java", "Python", "BDD", "Web Development", "Network Fundamentals"],
         current: true,
+    },
+    {
+        period: "Sept 2025 — Oct 2026",
+        role: "Gestion de projet de restructuration de la donnée",
+        company: "FDB Industries, Lorient (56)",
+        description:
+            "Gestion de projet de restructuration de la donnée pour améliorer la qualité et la cohérence des informations. Collecte et extration des données afin d'aboutir à la conception de tableau de bord pour l'analyse des données.",
+        technologies: ["Power BI", "Power Query", "SQL", "Data Analysis"],
+        current: false,
     },
     {
         period: "2023",
